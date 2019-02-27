@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import time
 
 
-def main():
+def get_info_from_zhilian():
     print('reading begin...')
 
     df = pd.DataFrame([])
@@ -87,4 +87,4 @@ def get_detail_by_url(url):
 
 
 if __name__ == '__main__':
-    main()
+    get_info_from_zhilian()

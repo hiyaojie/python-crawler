@@ -7,14 +7,14 @@ from bs4 import BeautifulSoup
 import time
 
 
-def main():
+def get_info_from_zhipin():
     # TODO:使用装饰器改进打印
-    print('reading begin...')
+    print('reading from boss zhipin begin...')
 
     # 简单配置
     output_file_name = 'output-zhipin.xlsx'
     keyword = 'java'
-    max_page = 5
+    max_page = 10
 
     # 使用pandas存储数据
     # TODO:使用数据库存储数据
@@ -37,7 +37,7 @@ def main():
     # 导出到excel，并去除默认index
     df.to_excel(output_file_name, index=False)
 
-    print('read success...')
+    print('read from boss zhipin success...')
 
 
 def get_info_by_kw_and_page(keyword, page):
@@ -108,4 +108,4 @@ def get_detail_by_url(url):
 
 
 if __name__ == '__main__':
-    main()
+    get_info_from_zhipin()
