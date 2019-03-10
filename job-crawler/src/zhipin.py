@@ -14,12 +14,12 @@ def get_info_from_zhipin():
     # 简单配置
     output_file_name = 'output-zhipin.xlsx'
     keyword = 'java'
-    max_page = 10
+    max_page = 20
 
     # 使用pandas存储数据
     # TODO:使用数据库存储数据
     df = pd.DataFrame([])
-    for page in range(1, max_page):
+    for page in range(0, max_page):
         df_temp = pd.DataFrame(get_info_by_kw_and_page(keyword, page))
         df = pd.concat([df, df_temp], ignore_index=True)
 
